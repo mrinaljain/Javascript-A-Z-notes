@@ -1,0 +1,1 @@
+var nae :string = 'mrinal';
