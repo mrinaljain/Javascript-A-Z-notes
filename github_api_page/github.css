@@ -26,6 +26,9 @@
        text-align: center;
        align-self: center;
     }
+    .profile h2{
+      text-align: center;
+    }
 
     .profile-details {
        display: grid;

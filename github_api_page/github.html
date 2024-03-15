@@ -12,29 +12,18 @@
 <body>
    <div class="container">
       <input type="text" id="usernameInput" placeholder="Enter GitHub username">
-      <button onclick="fetchProfile()">Fetch Profile</button>
+      <button id ='fetchProfile'>Fetch Profile</button>
    </div>
    <div class="container" id="profileContainer">
       <div class="profile">
-         <img id="avatar" src="https://avatars.githubusercontent.com/u/7473761?v=4" alt="Profile Picture">
+         <img id="avatar" src="" alt="Profile Picture">
          <h2 id="name"></h2>
-         <div class="profile-details" id="details">
-            <p>Username: mrinaljain</p>
-            <p>Location: Indore</p>
-            <p>Email: Not provided</p>
-            <p>Company: <a href="https://github.com/vatsanatech">vatsanatech</a></p>
-            <p>Blog: <a href="mrinaljain.com">mrinaljain.com</a></p>
-            <p>Bio: Professionally a Front-End Engineer at STAGE OTT @vatsanatech & Open Source Speaker</p>
-            <p>Twitter: <a href="https://twitter.com/mrinal_geek">@mrinal_geek</a></p>
-            <p>Followers: 49</p>
-            <p>Following: 11</p>
-            <p>Public Repos: 74</p>
-            <p>Public Gists: 3</p>
-            <p>Member since: May 3, 2014</p>
-            <p>Last updated: March 11, 2024</p>
+         <div class="profile-details" id="details" style="display: none;">
+           
          </div>
       </div>
    </div>
+   <script src="./github.js"></script>
 </body>
 
 </html>
