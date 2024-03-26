@@ -8,16 +8,19 @@
 let searchbtn = document.getElementById('searchBox');
 
 
-searchbtn.addEventListener('keydown', debounce(apiCaller, 2000));
+searchbtn.addEventListener('keydown', debounce(apiCaller, 200));
 
 /// Enhanced  function for our API call which will return a callback hence we call it  the debounce function
 function debounce(fun, debounceTime) {
+   let timerId;
    return function (e) {
-      let timerId;
       clearTimeout(timerId);
       timerId = setTimeout(fun(e), debounceTime);
    }
 }
+const debounceFunc = debounce(()=> {
+   console.log("Debounced Function Called");
+}, 300);
 
 
 //! Debounce Enhanced version
@@ -32,9 +35,13 @@ function enhancedDebounce(apiCaller, debounceTime) {
 
 /// Function which makes an API call
 // e is always inside callback function of eventlistener
-function apiCaller(e) {
-   console.log("API Call Done" + e.target.value );
+function apiCaller() {
+   // console.log("API Call Done" + e.target.value );
+   console.log("API Call Done" );
 }
+debounceFunc();
+// debounceFunc();
+// debounceFunc();
 
 
 // Q1 ) can you explain value of timeoutId
