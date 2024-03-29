@@ -18,6 +18,7 @@ document.addEventListener("keydown", function(e){
 });
 
 function handleClick(target) {
+   buttonAnimation(target);
    switch (target) {
       case "w":
          var audio = new Audio("./sounds/tom-1.mp3");
@@ -47,8 +48,16 @@ function handleClick(target) {
          var audio = new Audio("./sounds/crash.mp3");
          audio.play();
          break;
-      default:
-       
+      default:  
    }
    
+}
+
+function buttonAnimation(key) {
+  let pressedElement = document.querySelector('button.' + key);
+   pressedElement.classList.add("pressed");
+   setTimeout(() => {
+      pressedElement.classList.remove("pressed");
+
+   }, 500);
 }
