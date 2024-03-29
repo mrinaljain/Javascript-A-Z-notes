@@ -47,7 +47,8 @@ class Teacher extends Person {
    }
 }
 
-let stu = new Student('Somil', 33 , 'M', 'MBBS');
-
+let stu = new Student('Somil', 33, 'M', 'MBBS');
+let teach = new Teacher('Deepak Sir', 44, 'M', 'Sports');
 
 stu.study();
+teach.teaches();
