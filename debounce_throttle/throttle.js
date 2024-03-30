@@ -22,7 +22,6 @@ function betterApiCaller(actualFunctionTobeCalled, delay) {
             flag = true;
          }, delay);
       }
-      
    }
 }
 

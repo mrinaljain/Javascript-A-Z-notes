@@ -40,8 +40,8 @@ animal.makeSound();
 
 
 //! this inside arrow function
-/// this inside the arrow function points to the parent\s this reffrence
-console.log('this inside the arrow function points to the parent\s this reffrence');
+/// this inside the arrow function points to the enclosing lexical scope
+console.log('this inside the arrow function points to the  this of enclosing lexical scope');
 (() => console.log(this))();
 
 
@@ -50,11 +50,14 @@ let anotherAnimal = {
    breedName: 'ABC',
    age: 26,
    sound: 'woff',
-   makeSound: () => console.log(this)
+   makeSound: () => console.log(this),
+   // test: this
+   // test2:console.log(this)
 }
-console.log('this inside the Objects\'s arrow function points to the parent\s this reffrence');
+console.log('this inside the Objects\'s arrow function points to the enclosing lexical scope');
 anotherAnimal.makeSound();
-
+console.log(anotherAnimal.this);
+// console.log(anotherAnimal.this2);
 //! this inside nested arrow function
 
 let yetAnotherAnimal = {

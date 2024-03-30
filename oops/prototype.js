@@ -1,15 +1,50 @@
-function Foo(y) {
+///*  inheretince between objects normally using proto
+// let a = {
+//    x: 10,
+//    y: 30,
+//    calculate: function (z) {
+//       console.log(this.x + this.y + z);
+//    },
+// }
+
+// let b = {
+//    y: 20,
+//    __proto__: a
+// }
+
+// var c = {
+//    y: 40,
+//    temp: 111,
+//    __proto__: b
+// }
+///*  inheretince between objects normally using proto
+
+
+///! bellow we will  implement same inheritance as above using prototype
+function Foo(y, x) {
    this.y = y;
+   this.x = x;
+   console.log(this);
 }
 
 
 // adding new key using prototype hence new keys will be available for further objects to inherit
-Foo.prototype.x = 10
+// PROTOTYPE is an object that is available in constructor function. Prototype provides you with a way to inherit things in JS and the inheritance is known as [prototypical Inheritance]
+
 Foo.prototype.calaulate = function (z) {
-   console.log( + this.x + this.y + z);
+   console.log(+ this.x + this.y + z);
 }
+Foo.prototype.x = 10
+let a = new Foo(20 , 50);
 
-let a = new Foo(20);
-let b = new Foo(30);
 
+let b = new Foo(10 , 50);
+// internally proto of b will be pointed to the prototype of Foo constructor function in order to inheritence to work
+// b.__proto__ = Foo.prototype
+// i.e. b.calculate = Foo.prototype.calculate 
+
+
+console.log(b);
 a.calaulate(40);
+
+// Foo.prototype.calaulate(20);  //! not possible as its constructor function

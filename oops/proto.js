@@ -1,20 +1,27 @@
 // __proto__ is used to share context betweeb 2 objects
 
-let a ={
-   x:10,
+let a = {
+   x: 10,
    y:30,
-   calculate: function(z){
+   calculate: function (z) {
       console.log(this.x + this.y + z);
-   }
+   },
+   //! for proto chain
+   // __proto__:c
 }
 
 let b = {
- y: 20,
- __proto__: a
+   y: 20,
+   __proto__: a
 }
 
-let c = {
-y:40
+var c = {
+   y: 40,
+   temp: 111,
+   __proto__: b
 }
 
 b.calculate(50);
+
+//? Question
+// Can we add __proto : c  inside object a to create a proto loop

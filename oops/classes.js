@@ -1,11 +1,31 @@
 // ES 6 introduced concept of  classes which is same as the constructor functions , just a syntactical sugar 
 
-
+class Dog {
+   constructor(objectKaName, objectKiBreed) {
+      this._name = objectKaName;
+      this.breed = objectKiBreed;
+      function barkinside() {
+         console.log("bhow bhow bhow inside constructor");
+      }
+      this._barkinside = barkinside;
+   }
+   get name() {
+      return this._name;
+   }
+   barkoutside() {
+      console.log("bhow bhow bhow outside");
+   }
+};
 class Person {
    constructor(name, age) {
       this.name = name;
       this.age = age;
+      // below greet method will be local to the constructor class
+      this.greet1 =()=> {
+         console.log("Hello Everyone..!");
+      }
    }
+   // below method will go to the prototype object by default and available for nheritance
    greet() {
       console.log("Hello Everyone..!");
    }
@@ -34,7 +54,8 @@ class Student extends Person {
 }
 
 
-// creating extended classes
+
+
 
 class Teacher extends Person {
    constructor(name, age, gender, subject) {
@@ -48,7 +69,15 @@ class Teacher extends Person {
 }
 
 let stu = new Student('Somil', 33, 'M', 'MBBS');
+// protochain for above inheritance
+// stu.__proto__ --> Student.prototype
+//Student.prototype.__proto__ -- > Person.prototype
+
+
 let teach = new Teacher('Deepak Sir', 44, 'M', 'Sports');
+// protochain for above inheritance
+// teach.__proto__ --> Teacher.prototype
+//teacher.prototype.__proto__ -- > Person.prototype
 
 stu.study();
 teach.teaches();
