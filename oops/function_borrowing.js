@@ -30,6 +30,8 @@ let employeeTwo = {
 }
 
 //! Using call
+// call(oldobject , params);
+// call is a method available on top of a function allows us to change the current calling object of the function
 employee.printFullName.call(employeeTwo , 'Delhi' , 'Software Developer' );
 // employee.getAge.call(employeeTwo);
 
@@ -47,3 +49,9 @@ employee.printFullName.apply(employeeTwo, ['Delhi', 'Software Developer']);
 
 let bindedFunction = employee.printFullName.bind(employeeTwo, 'Chandigarh');
 bindedFunction('Flutter');
+
+
+
+
+
+// monika.deductMonthelyFee.call(rachel, 233);

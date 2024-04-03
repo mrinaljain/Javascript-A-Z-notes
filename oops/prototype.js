@@ -48,3 +48,17 @@ console.log(b);
 a.calaulate(40);
 
 // Foo.prototype.calaulate(20);  //! not possible as its constructor function
+
+
+// Question
+// creating prototype object on Array 
+Array.prototype.double = function double(...args) {
+   for (let i = 0; i < this.length; i++) {
+    const element = this[i];
+     this[i] *= 2;    
+   }
+}
+
+let nee = [1,2,3,4,5,6,7,8];
+nee.double();
+console.log(nee);

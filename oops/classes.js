@@ -12,8 +12,8 @@ class Dog {
    get name() {
       return this._name;
    }
-   barkoutside() {
-      console.log("bhow bhow bhow outside");
+    static barkoutside() {
+      console.log(this.breed +  " is doing bhow bhow bhow outside");
    }
 };
 class Person {
@@ -81,3 +81,8 @@ let teach = new Teacher('Deepak Sir', 44, 'M', 'Sports');
 
 stu.study();
 teach.teaches();
+
+
+// let pomy = new Dog('kuttekanaam', 'kutte ki breed')
+
+Dog.barkoutside();
