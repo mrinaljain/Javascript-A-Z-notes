@@ -9,7 +9,11 @@ const p2 = new Promise(function(resolve, reject){
    }, 30000);
 });
 
-
+//! creating promices using async await 
+// async function always returs a promise even if we not return it will convert return value to a promise
+async function p3() {
+   return 1;
+}
 
 async function promiseHandeler() {
    console.log('Function Executon Started');
@@ -20,6 +24,9 @@ async function promiseHandeler() {
    const val2 = await p2;
    console.log('p2 resolved');
    console.log(val2);
+   const val3 = await p3();
+   console.log(val3);
 }
+
 
 promiseHandeler();

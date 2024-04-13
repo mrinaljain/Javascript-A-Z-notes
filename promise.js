@@ -29,6 +29,8 @@ let cart = ["jeans", "tshirt", "shoes"];
    .catch(function (errorObj) {
       console.log(errorObj.message);
    });
+//! Note:
+// .then can accept 2 functions also , 1 for success and other for reject
 
 // createOrder promise
 function createOrder(cart, isValid) {

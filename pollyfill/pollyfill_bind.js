@@ -1,3 +1,5 @@
+/// polifill will be used for browswer who doesnot support bind
+
 
 let person1 ={
     name : "Monica",
@@ -23,6 +25,7 @@ let person2 = {
 person1.printAge.call(person2 , 'Goa');
 
 //bind
+
 
 let printRachel = person1.printAge.bind(person2); 
 printRachel("Mumbai")
