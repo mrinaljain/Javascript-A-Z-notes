@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Please NOTE that the link to assets (like images) need to be set in global context.
+For example:
+To access an image from assets folder correct way to set src attribute is 
+
+src = 'profile.png'
+
+instead of 
+
+src = './assets/profile.png'
+-->
+
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Ticket Management App</title>
+
+   <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+   <div class="container">
+      <h1>Star Rating Component</h1>
+      <div id="star-container" class="star-container">
+         <span class="star" data-index="1">&#9733;</span>
+         <span class="star" data-index="2">&#9733;</span>
+         <span class="star" data-index="3">&#9733;</span>
+         <span class="star" data-index="4">&#9733;</span>
+         <span class="star" data-index="5">&#9733;</span>
+      </div>
+      <h2>Rating Count:
+         <span id="count">0</span>
+      </h2>
+   </div>
+   <script src="script.js"></script>
+</body>
+
+</html>
