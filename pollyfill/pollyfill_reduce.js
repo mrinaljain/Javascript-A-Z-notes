@@ -60,7 +60,13 @@ console.log(filteredArr);
 // TODO : Using recursion
 // loop through every element  also if we find an array on the way  use recursion and same function.
 function flat(accumulator, currentValue) {
+   if(Array.isArray(currentValue)){
+      accumulator.push(...currentValue)
+   }else{
+      accumulator.push(currentValue);
+   }
 
 }
 
-arr.reduce(flat, []);
+let flattened =  arr.reduce(flat, []);
+console.log(flattened);
