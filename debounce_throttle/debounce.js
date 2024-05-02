@@ -8,7 +8,7 @@
 let searchBox = document.getElementById('searchBox');
 
 ///? With Debounce
-searchBox.addEventListener('keyup', betterApiCaller(apiCaller, 1000));
+searchBox.addEventListener('keyup', debounce(apiCaller, 600));
 
 ///? Without Debounce
 // searchBox.addEventListener("keyup", apiCaller);
@@ -20,17 +20,32 @@ function betterApiCaller(actualFunctionTobeCalled, delay) {
    return function () {
       let context = this;
       args = arguments;
-      if (timer)clearTimeout(timer);
+      if (timer) {
+         console.log(`timer exists : ${timer}`);
+         clearTimeout(timer);
+      }
+      console.log(`timer not exists : ${timer}`);
       timer = setTimeout(() => {
-         // actualFunctionTobeCalled(e);
-         // OR
          actualFunctionTobeCalled.apply(context, arguments);
       }, delay);
 
    }
 }
 
-///? actualFunctionTobeCalled Function which makes an API call
+// practice writing debounce
+function debounce(actualFunction , debounceDelay) {
+   let timer;
+   return function (...args){
+      let context = this;
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+         actualFunction.apply(context,args);
+      }, debounceDelay);
+
+   }
+}
+
+//! actualFunctionTobeCalled Function which makes an API call
 count = 0;
 function apiCaller(e) {
    console.log(++count + " API Call Done : " + e.target.value);
