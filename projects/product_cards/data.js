@@ -1,4 +1,4 @@
-let data = [
+export let data = [
    {
       id: 1,
       title: "Sample Product 1",
