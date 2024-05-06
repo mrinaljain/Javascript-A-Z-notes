@@ -1,8 +1,25 @@
-import { data}  from "./data.js";
-
+import { data } from "./data.js";
 const cardContainer = document.getElementById("container");
 
+
+const starfilled = '<span class="star__filled">&#9733;</span>';
+const starnotfilled = '<span class="star__notfilled">&#9734;</span>';
+
 for (const card of data) {
+    let coloredStar = parseInt(card.rating.rate);
+        let notColoredStar = 5 - coloredStar;
+
+        let allStardiv = ''; // Initialize empty string for all__star HTML
+
+        // Append filled stars
+        for (let i = 0; i < coloredStar; i++) {
+            allStardiv += `<span class="star__filled">&#9733;</span>`;
+        }
+
+        // Append empty stars
+        for (let i = 0; i < notColoredStar; i++) {
+            allStardiv += `<span class="star__notfilled">&#9734;</span>`;
+        }
    const cardHTML = document.createElement('div');
    cardHTML.classList.add("card");
    cardHTML.innerHTML = `
@@ -11,18 +28,14 @@ for (const card of data) {
                 <br>
                 <span class="product__category">${card.category}</span>
                 <div class="all__star">
-                    <span class="${card.rating.rate >= 1 ? "star__filled" : "star__notfilled"}">
-                    ${card.rating.rate >= 1 ? "&#9733;" : "&#9734;"}</span>
-                    <span class="${card.rating.rate >= 2 ? "star__filled" : "star__notfilled"}">${card.rating.rate >= 2 ? "&#9733;" : "&#9734;"}</span>
-                    <span class="${card.rating.rate >= 3 ? "star__filled" : "star__notfilled"}">${card.rating.rate >= 3 ? "&#9733;" : "&#9734;"}</span>
-                    <span class="${card.rating.rate >= 4 ? "star__filled" : "star__notfilled"}">${card.rating.rate >= 4 ? "&#9733;" : "&#9734;"}</span>
-                    <span class="${card.rating.rate >= 5 ? "star__filled" : "star__notfilled"}">${card.rating.rate >= 5 ? "&#9733;" : "&#9734;"}</span>
+                   ${allStardiv}
                 </div>
-                <div class="rating__count">Rating Count : <span>${card.rating.rate}</span></div>
+                <div class="rating__count">Rating Count : <span>${card.rating.count}</span></div>
             </div>
             <div class="btn">
                 <button class="btn__buy">Buy Now</button>
             </div>`;
+
    cardContainer.append(cardHTML);
 }
 
