@@ -45,7 +45,7 @@ function createOrder(cart, isValid) {
             resolve(orderId);
          }, 5000);
       }
-   })
+   });
    return pr;
 }
 
