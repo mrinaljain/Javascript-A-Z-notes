@@ -1,4 +1,6 @@
-// __proto__ is used to share context betweeb 2 objects
+//! Inheritance between objects 
+// __proto__
+// is used to share context betweeb 2 objects
 
 let a = {
    x: 10,
@@ -18,9 +20,10 @@ let b = {
 var c = {
    y: 40,
    temp: 111,
-   __proto__: b
+   __proto__: a
 }
 
+// console.log(c);
 b.calculate(50);
 
 //? Question

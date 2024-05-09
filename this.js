@@ -1,4 +1,6 @@
-'use strict';
+// 'use strict';
+
+
 // console.error('STRICT MODE ON');
 //! this in the global space
 /// this in global space points to the globalObject of the Javascript Rntime Environment 
@@ -72,11 +74,35 @@ console.log('this inside the Objects\'s NESTED arrow function points to the pare
 yetAnotherAnimal.makeSound();
 
 // this inside DOM
+// current node
 
 // diffrence btwn Method / function
 
 // this keyword inside class 
 
+
 // this keyword inside constructors
 
-// call apply bind methods
+//this in call ,bind apply function
+
+let student = {
+   name :"mohan",
+   printName : function(city){
+      console.log(`My Name is ${this.name} and I am from ${city}`);
+   },
+   printThis : function(){
+      console.log(this);
+   }
+}
+
+let student2 = {
+   name: "Rohan"
+}
+
+student.printName.call(student2, 'Delhi');
+student.printName.apply(student2, ['Delhi']);
+let prinStudentName = student.printName.bind(student2);
+prinStudentName("Raamnagar");
+//experiment below
+student.printThis.call(this);
+

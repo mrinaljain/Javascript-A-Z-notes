@@ -2,6 +2,7 @@
 
 class Dog {
    constructor(objectKaName, objectKiBreed) {
+      let privateName = 'Private name';
       this._name = objectKaName;
       this.breed = objectKiBreed;
       function barkinside() {
@@ -12,8 +13,8 @@ class Dog {
    get name() {
       return this._name;
    }
-    static barkoutside() {
-      console.log(this.breed +  " is doing bhow bhow bhow outside");
+   barkoutside() {
+      console.log(this.breed +  privateName + " is doing bhow bhow bhow outside");
    }
 };
 class Person {
@@ -34,7 +35,7 @@ class Person {
 Person.prototype.gender = 'm';
 
 
-let p1 = new Person('mrinal', 30)
+// let p1 = new Person('mrinal', 30)
 // console.log(p1);
 // p1.greet();
 
@@ -68,7 +69,7 @@ class Teacher extends Person {
    }
 }
 
-let stu = new Student('Somil', 33, 'M', 'MBBS');
+// let stu = new Student('Somil', 33, 'M', 'MBBS');
 // protochain for above inheritance
 // stu.__proto__ --> Student.prototype
 //Student.prototype.__proto__ -- > Person.prototype
@@ -79,10 +80,12 @@ let teach = new Teacher('Deepak Sir', 44, 'M', 'Sports');
 // teach.__proto__ --> Teacher.prototype
 //teacher.prototype.__proto__ -- > Person.prototype
 
-stu.study();
-teach.teaches();
+// stu.study();
+// teach.teaches();
 
 
-// let pomy = new Dog('kuttekanaam', 'kutte ki breed')
+let pomy = new Dog('kuttekanaam', 'kutte ki breed')
 
-Dog.barkoutside();
+pomy.barkoutside();
+
+// console.log(pomy.privateName);
