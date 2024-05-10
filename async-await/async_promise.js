@@ -9,3 +9,8 @@ res.addEventListener("click", () => {
 });
 
 
+
+async function rejecte(params) {
+   throw Error("rejected");
+}
+

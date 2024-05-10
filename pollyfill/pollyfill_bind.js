@@ -50,3 +50,25 @@ Function.prototype.pollyfillBind = function(...args){
 let printRachelAge = person1.printAge.pollyfillBind(person2);
 
 printRachelAge("Indore");
+
+
+
+
+
+// if(!Function.prototype.bind){
+   Function.prototype.myBind = function (...args) {
+
+      let context = this;
+      let param = args.splice(1);
+      return function (...args2) {
+         context.apply(args[0], [...param, ...args2]);
+      }
+
+   }
+
+// }
+
+
+let latestBind = person1.printAge.myBind(person2);
+
+latestBind("Guna");
