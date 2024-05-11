@@ -17,7 +17,9 @@ let memoizeFunctionMaker = function(normalFunction) {
       let key = args.join("_");
       console.log(`key: ${key}`);
       // if parameter present in cache return answer from cache
-      if (cache.hasOwnProperty(key)){
+      // if (cache.hasOwnProperty(key)){
+      // OR
+      if (key in cache){
          console.log("From Cache");
          return cache[key];
       }  
