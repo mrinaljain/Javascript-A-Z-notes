@@ -8,7 +8,7 @@
 let searchBox = document.getElementById('searchBox');
 
 ///? With Debounce
-searchBox.addEventListener('keyup', debounce(apiCaller, 600));
+searchBox.addEventListener('keyup', debouncer(apiCaller, 1000));
 
 ///? Without Debounce
 // searchBox.addEventListener("keyup", apiCaller);
@@ -50,6 +50,25 @@ count = 0;
 function apiCaller(e) {
    console.log(++count + " API Call Done : " + e.target.value);
    // console.log(count++ + " API Call Done : ");
+}
+
+
+//! Debounce practice
+
+//we will create a function which will tak 2 inputs(function , delay ) 
+// return a better function 
+// put a check that is function being recalled within timeinterval
+
+function debouncer(fun, delay) {
+   let timer;
+
+   return function (e) {
+      if (timer) clearTimeout(timer);
+      timer = setTimeout(function () {
+         fun(e);
+      }, delay);
+
+   }
 }
 
 

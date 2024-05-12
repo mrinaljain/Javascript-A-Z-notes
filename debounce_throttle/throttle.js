@@ -7,7 +7,7 @@ let searchBtn = document.getElementById("searchBtn");
 
 
 //? with throttling
-searchBtn.addEventListener("click", throtle(apiCaller, 3000));
+searchBtn.addEventListener("click", throtleFinal(apiCaller, 5000));
 
 // ! 1) Namaste JAvascript way of creating throttle (settimeout)   wrong way 
 // function betterApiCaller(actualFunctionTobeCalled, delay) {
@@ -66,4 +66,24 @@ function throtle(actualFuncion, throttleDelay) {
 count = 0;
 function apiCaller() {
    console.log(++count + " API Call Done : ");
+}
+
+
+
+//! 4 Practice Throttle
+
+// we will create a function which will take a function and delay as arguments
+// function will return a better function which then will be attached to the eventlistener
+// now  we need to check time diff between 2 function calls
+
+function throtleFinal(fun, del) {
+   let lastCalled = 0;
+   return function (...args) {
+      var date = new Date();
+      let now = date.getTime()
+      if (now - lastCalled > del) {
+         fun.apply(this, [args]);
+         lastCalled = now;
+      }
+   }
 }
