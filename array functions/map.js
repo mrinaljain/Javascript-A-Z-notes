@@ -10,6 +10,8 @@ let users = [
    { first_name: "Olivia", last_name: "Martinez", age: 27 },
    { first_name: "Daniel", last_name: "Anderson", age: 38 }
 ];
+
+
 // Question 1 find an array with fullnames of all entries using map function
 function mergeNames(currentItem) {
    return currentItem.first_name + ' ' + currentItem.last_name;

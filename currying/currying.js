@@ -1,13 +1,8 @@
-// Currying bassicaly means to convert a function which wtakes multiple arguments 
-// into a seriese of functions which takes single arguments untill we reach the solution
-
-
-
 //! Using Closure
 function add(x) {
-   return function (y) {
-      return x + y;
-   }
+  return function (y) {
+    return x + y;
+  };
 }
 // console.log(add(5)(4));
 
@@ -15,10 +10,13 @@ function add(x) {
 
 //! Using bind
 
-function addition(x , y){
-   return x+y;
+function addition(x, y) {
+  return x + y;
 }
 
-let addBy5 = addition.bind(this,5);
+let addBy5 = addition.bind(this, 5);
+let addBy10 = addition.bind(this, 10);
 
 console.log(addBy5(10));
+
+console.log(addBy10(20));
