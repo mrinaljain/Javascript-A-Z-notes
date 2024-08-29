@@ -65,9 +65,8 @@ function debouncer(fun, delay) {
    return function (e) {
       if (timer) clearTimeout(timer);
       timer = setTimeout(function () {
-         fun(e);
+        fun(e);
       }, delay);
-
    }
 }
 
