@@ -13,18 +13,20 @@ let a = {
 }
 
 let b = {
-   y: 20,
-   __proto__: a
-}
+  y: 20,
+  x: 20,
+  __proto__: a,
+};
 
 var c = {
-   y: 40,
-   temp: 111,
-   __proto__: a
-}
+  y: 40,
+  temp: 111,
+  __proto__: b,
+};
 
 // console.log(c);
-b.calculate(50);
+// b.calculate(50)
+c.calculate(50);
 
 //? Question
 // Can we add __proto : c  inside object a to create a proto loop
