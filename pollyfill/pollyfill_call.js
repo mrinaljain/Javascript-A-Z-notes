@@ -23,6 +23,5 @@ Function.prototype.myCall = function (...args) {
    let params = args.splice(1);
    console.log(params);
    this.apply(newContext, [params]);
-
 }
 student1.printName.myCall(student2, 2,3);

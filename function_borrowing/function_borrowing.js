@@ -37,6 +37,7 @@ let employeeTwo = {
   age: 25,
 };
 
+
 //! Using call
 // call(oldobject , params);
 // call is a method available on top of a function allows us to change the current calling object of the function

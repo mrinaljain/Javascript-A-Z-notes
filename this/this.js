@@ -15,7 +15,7 @@ console.log(this);
 /// strict mode ON  -->  undefined
 /// strict mode OFF -->  window
 /// On top of strict mode the value of this also depends on the object reffrence through which  the function invocation happens
-/// window.fun();  --> wndow
+/// window.fun();  --> winndow
 
 function a() {
    // let b = 10;
@@ -76,14 +76,12 @@ yetAnotherAnimal.makeSound();
 // this inside DOM
 // current node
 
-// diffrence btwn Method / function
 
 // this keyword inside class 
 
 
 // this keyword inside constructors
 
-//this in call ,bind apply function
 
 let student = {
    name :"mohan",

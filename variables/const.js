@@ -1,6 +1,7 @@
 // block scopped
 
-const t = 1;
+
+// const t = 1;
 
 
 function program() {
