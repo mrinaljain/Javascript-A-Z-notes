@@ -7,8 +7,18 @@ var p1 = new Promise((res, rej) => {
 });
 
 // resolving promise by .then
-p1.then((data) => {
-  console.log(data);
-});
+// p1.then((data) => {
+//   console.log(data);
+// });
 
+async function createPromise() {
+  let a = 20;
+}
+
+async function solve(){
+let prm = await createPromise();
+console.log(prm);
+}
+solve();
+ 
 // console.log(result);
