@@ -1,23 +1,58 @@
 # Promise
 
 Promise is an object which represents the eventual completion (or failure)  of an Asynchronous operation.
+```
+const p = new Promise((res , rej)=> {
+
+   if(some consition){
+      res("response data")
+   }
+   else{
+      rej("Rejection Data or Error")
+   }
+});
+
+// Resolving  a Promise
+
+p.then((data)=>{
+   console.log(data)
+}).catch((err)=>{
+   console.log(err.message);
+});
+```
 
 ## How Promises and Timers Work
-1.Promise Creation: When you create a promise (like p1 and p2), the code inside the promise's executor function (the function passed to new Promise()) runs immediately. This means that when you define a setTimeout inside a promise, the timer starts right away.
+### Promise Creation: 
+When you create a promise (like p1 and p2), the code inside the promise's executor function (the function passed to new Promise()) runs immediately. This means that when you define a setTimeout inside a promise, the timer starts right away.
 
-2.Timers Running Concurrently: Because JavaScript is single-threaded, all asynchronous operations, like timers, are handled by the event loop. When you create multiple promises with timers, these timers are all scheduled at the same time, meaning they start counting down concurrently.
+### Timers Running Concurrently:
+ Because JavaScript is single-threaded, all asynchronous operations, like timers, are handled by the event loop. When you create multiple promises with timers, these timers are all scheduled at the same time, meaning they start counting down concurrently.
 
-3.Awaiting Promises: When you use await, the function pauses execution until the awaited promise resolves. If the promise has already been resolved (because its timer has completed), the function continues immediately. 
+### Awaiting Promises:
+When you use await, the function pauses execution until the awaited promise resolves. If the promise has already been resolved (because its timer has completed), the function continues immediately. 
+
+## Stages of Promise object
+- Pending
+- Settled ( Can be Settled in to 2 types )
+   - Resolved (Fulfilled)
+   - Rejected
+
+## Promise APIs
 
 
+### 1. Promise.all( ) [ Fail Fast ]
 
-### Promise.all() [Fail Fast]
+- Promise.all takes an Array of promises and returns an array once all Promises are fulfilled.
+- Even if single promise fails then everything fails at the very moment.
 
-takes an array --> returns single array once all promises are resolved
+### 2. Promise.allSettled( ) [Wait for all]
+- Waits for all to finish then returns the res, rej both in a Array
 
-### Promise.allSettled() [Wait for all]
-waits for all to finish then returns the res, reh both in array
+### 3. Promise.race( ) [First settled] 
+- Its just lika a race between all promises.
+- The promise which crosses finishline first is the answer.
+- The winner promise can be both SUCCESS of FAILURE.
 
-### Promise.race() [First settled] 
+### 4. Promise.any( ) [First resolve]
+- Any promise out of all which becomes successfull first is the winner.
 
-### Promise.any() [First resolve]
