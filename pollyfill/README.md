@@ -86,3 +86,99 @@ Array.prototype.reduce = function(callback, accumulator){
 }
 ```
 ---
+## 4. Polyfil for Call
+
+**Defination**: Call is afunction borrowing method available on top of functions which is used to change the current calling context of any method. 
+
+```
+let user1 = {
+   name: "Mrinal",
+   greet: function(){
+      console.log(`Hi ${this.name}`)
+   }
+}
+
+let user2 = {
+   name "kunal"
+}
+
+user1.greet.call(user2);
+```
+
+**Solution**: The proposed prototype function will take an object as input.
+and then change the context of the existing calling function.
+
+```
+Function.prototype.call = function(obj){
+  
+    return this.apply(obj);
+
+
+}
+```
+---
+## 5. Polyfil for apply
+
+**Defination**: Apply is a method which takes in array of elements 
+
+```
+let user1 = {
+   name: "Mrinal",
+   greet: function(){
+      console.log(`Hi ${this.name}`)
+   }
+}
+
+let user2 = {
+   name "kunal"
+}
+
+user1.greet.apply(user2, []);
+```
+
+**Solution**: The proposed prototype function will take an object as input.
+and then change the context of the existing calling function.
+
+```
+Function.prototype.apply = function(obj){
+  
+    return this.call(obj);
+
+
+}
+```
+---
+## 6. Polyfil for Bind
+
+**Defination**: Bind is the method which saves the reffrence to the function whose context is changed.
+
+```
+let user1 = {
+   name: "Mrinal",
+   greet: function(){
+      console.log(`Hi ${this.name}`)
+   }
+}
+
+let user2 = {
+   name "kunal"
+}
+
+let newGreet = user1.greet.bind(user2);
+```
+
+**Solution**: The proposed prototype function will take an object as input.
+and then change the context of the existing calling function and return a function reffrence.
+
+```
+Function.prototype.bind = function(obj){
+  
+   var ref =   function(){
+         this.apply(obj);
+   }
+   
+   return ref;
+
+}
+```
+---
