@@ -9,6 +9,7 @@ The repository is structured as follows:
 /A ├── ArrayMethods.md ├── AsynchronousProgramming.md 
 /B ├── BindCallApply.md ├── BigInt.md 
 /C ├── Closures.md ├── Classes.md ... 
+/C ├── Closures.md ├── Classes.md ... 
 /Z ├── ZeroBasedIndexing.md ├── ZippingArrays.md
 
 
