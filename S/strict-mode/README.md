@@ -1,0 +1,1 @@
+# Strict Mode and Sloppy Mode 

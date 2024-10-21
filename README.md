@@ -6,7 +6,10 @@ Welcome to the **JavaScript A-Z Repository**! This repository is a comprehensive
 
 The repository is structured as follows:
 
-/A ├── ArrayMethods.md ├── AsynchronousProgramming.md /B ├── BindCallApply.md ├── BigInt.md /C ├── Closures.md ├── Classes.md ... /Z ├── ZeroBasedIndexing.md ├── ZippingArrays.md
+/A ├── ArrayMethods.md ├── AsynchronousProgramming.md 
+/B ├── BindCallApply.md ├── BigInt.md 
+/C ├── Closures.md ├── Classes.md ... 
+/Z ├── ZeroBasedIndexing.md ├── ZippingArrays.md
 
 
 ## Topics Covered
