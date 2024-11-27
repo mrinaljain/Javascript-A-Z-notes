@@ -1,5 +1,7 @@
 # JavaScript A-Z Repository
 
+![Image](https://topmate-staging.s3.amazonaws.com/mSFk54Hyfv95BtbyjCKR1Y.png)
+
 Welcome to the **JavaScript A-Z Repository**! This repository is a comprehensive collection of JavaScript topics organized alphabetically from A to Z. Each folder represents a letter and contains one or more JavaScript topics starting with that letter. Whether you're a beginner or an experienced developer, you'll find valuable learning resources and code examples in each section.
 
 ## Structure
