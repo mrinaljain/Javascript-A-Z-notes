@@ -13,9 +13,17 @@ user = {
 
 console.table(user);
 
-fruits = ["Orange", "Banana", "Grapes"];
 
-console.trace(fruits);
+function a(x = "Hello") {
+  function b(y = "World..!") {
+    console.log(`x + y`);
+    console.trace();
+  }
+  b();
+}
+a();
+
+
 
 // Group Logs;
 

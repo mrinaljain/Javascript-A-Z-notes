@@ -2,7 +2,8 @@
 
 console is used to improve the logging  of information inside the web application.
 
-
+Defination 
+: The console object provides access to the debugging console of browser.
 
 
 ## Connsole Methods
@@ -14,3 +15,6 @@ console is used to improve the logging  of information inside the web applicatio
 6. console.group / groupEnd
 7. console.trace
 8. console.time / timeEnd
+9. console.dir
+10. console.assert
+11. console.clear
