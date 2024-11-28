@@ -26,7 +26,7 @@ parent.addEventListener(
   function (e) {
     let clickNode = e.target;
     console.log("Parent");
-    if (stopParentPropogation) e.stopPropagation();
+    // if (stopParentPropogation) e.stopPropagation();
   },
   capturepParent
 );
@@ -36,7 +36,7 @@ child.addEventListener(
   function (e) {
     let clickNode = e.target;
     console.log("Child");
-    if (stopChildPropogation) e.stopPropagation();
+    // if (stopChildPropogation) e.stopPropagation();
   },
   captureChild
 );

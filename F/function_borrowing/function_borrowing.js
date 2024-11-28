@@ -22,6 +22,10 @@ let employee = {
   },
 };
 
+
+
+
+
 // employee.getAge();
 // employee.printFullName();
 
@@ -38,8 +42,10 @@ let employeeTwo = {
 };
 
 
+
+employee.printFullName.call(employeeTwo);
 //! Using call
-// call(oldobject , params);
+// oldObject.meethodName.call(newObject , params);
 // call is a method available on top of a function allows us to change the current calling object of the function
 employee.printFullName.call(employeeTwo, "Delhi", "Software Developer");
 // employee.getAge.call(employeeTwo);

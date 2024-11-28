@@ -30,4 +30,5 @@ async function resolvePromise(){
 ## Questions
 
 - How is Async/Await differnt from .then method.
+ helps in better promise chaining
 

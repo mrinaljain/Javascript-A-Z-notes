@@ -11,7 +11,7 @@ Arrays are simple iterable datastructures which can be traversed via multiple ty
 let user = ["mrinal", "jain", "sanawad", "indore"];
 ```
 
-### 1.1 for Loop
+### 1.1 for Loop [Array]
 
 ```
 for(let i = 0; i < user.length; i++){
@@ -19,7 +19,7 @@ for(let i = 0; i < user.length; i++){
 }
 ```
 
-### 1.2 for-each Loop
+### 1.2 for-each Loop [Array]
 
 ```
 user.foreach(()=>{
@@ -28,7 +28,7 @@ user.foreach(()=>{
 });
 ```
 
-### 1.3 for-of Loop
+### 1.3 for-of Loop [Array]
 ```
 for(int key of user){
 
