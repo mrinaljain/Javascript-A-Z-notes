@@ -24,7 +24,7 @@ const userTwo = {
 //   console.log(i);
 // }
 
-// for in [Object]
+//! for-in [Object]
 // for (const key in userTwo) {
 //   if (userTwo.hasOwnProperty(key)) {
 //     console.log(`${key}: ${userTwo[key]}`);
