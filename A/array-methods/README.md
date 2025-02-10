@@ -1,4 +1,4 @@
-# Array Methods
+# [Array Methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
 ### map
 Map takes an array and performes certain operations on it and then returns a new array.
@@ -8,7 +8,16 @@ Filter returnes some part of the array based on certain condition
 
 ### reduce
 reduce will work on the entire array and return the resultant
+```
+Array.reduce(callback, initialValue)
 
+function callback(previousValue , currentValue , currentIndex, arr){
+   .
+   .
+   .
+   return currentValue;
+}
+```
 ### reduceRight
 reduceRight works from right to left
 
@@ -43,14 +52,20 @@ length will return the length of the given array.
 ```
 ```
 
-### isArray
-
+### isArray()
+```
+Array.isArray(arr);
+```
 
 ### reverse
 reverse method will return the array with reversed index on th esame array.
 
 ### sort 
 sort will sort the array lexically and return the updated array.
+- sort method can take another param that is a comparator
+```
+Array.sort(comparator);
+```
 
 
 ### join
