@@ -1,3 +1,5 @@
+"use strict";
+
 // var a = 10;
 
 // function call() {
@@ -26,7 +28,27 @@
 
 // outer();
 
-
 var x = 3;
 var y = x++;
 y += 1;
+
+console.log(hoistedVar); // undefined
+var hoistedVar = 5;
+
+test = 15;
+var test = 10;
+
+console.log(test);
+
+let mohan = new Person("mohan", "delhi", 22, "M");
+
+class Person {
+  constructor(name, city, age, gender) {
+    name = this.name;
+    city = this.city;
+    age = this.age;
+    gender = this.gender;
+  }
+}
+
+console.log(mohan.name);
