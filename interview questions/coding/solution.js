@@ -41,6 +41,21 @@ console.log(ans4);
 
 //6 
 const arr5 = [1, 2, 3, 4];
-structuredClone(arr5)
+structuredClone(arr5);
+
+//7
+let arr6 = [12, 35, 1, 10, 34, 1];
+
+function secondMax(inputArray) {
+  let length = inputArray.length;
+
+  let sorted = inputArray.sort().reverse();
+
+  console.log("6", sorted[1]);
+}
+
+secondMax(arr6);
+
+
 
 
