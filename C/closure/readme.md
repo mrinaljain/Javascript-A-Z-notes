@@ -28,13 +28,49 @@ closureFun(20);
 - in closure the variables are stored in closure stored via address
 
 ## Corner case in closures
--
+- circular dependency
+  A circular reference occurs when two or more objects reference each other, preventing them from being garbage collected.
+- memory leak due to storages
 
 ## Usage og closures
 - currying
 - memoizing
 - iterators 
+- private variables
+```
+  function person(name, age) {
+      let _name = name;
+      let _age = age;
+      return {
+      getName: function() { return _name; },
+      getAge: function() { return _age; }
+      };
+  }
+  const individual = person('John', 30);
+  console.log(individual.getName()); // John
+  console.log(individual.getAge());  // 30
+                
+```
+- maintaining state
+- encapsulation
 
 ### Questions
 
 1. Corner case in closures?
+2. What is the practical use of closures?
+
+   Closures are useful for data encapsulation, maintaining state, and creating private variables that are not accessible outside the closure.
+
+3. What is a closure’s impact on memory?
+   Closures can cause memory to be retained longer than expected because the inner function keeps a reference to its outer function's variables, preventing them from being garbage collected.
+
+4. How does closure handle asynchronous code?
+   Closures are often used with asynchronous code, where they preserve variables across async operations such as `setTimeout` or Promises.
+
+5. What is the relationship between closures and higher-order functions?
+   
+   HOFs return functions at times which have closures
+  
+6. Can closures be used with event handlers?
+   
+   Yes, closures are often used in event handlers to remember and manage state related to the event, even after the event has been triggered.

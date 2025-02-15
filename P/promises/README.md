@@ -56,3 +56,12 @@ When you use await, the function pauses execution until the awaited promise reso
 ### 4. Promise.any( ) [First resolve]
 - Any promise out of all which becomes successfull first is the winner.
 
+
+
+
+#### Questions 
+1. What are Promise Handlers in JavaScript?
+   .then()   .catch()
+
+2. What is the difference between `Promise` and `Async-Await`?
+   

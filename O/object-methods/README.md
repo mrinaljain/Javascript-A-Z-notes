@@ -2,4 +2,6 @@ The Object.assign() static method copies all enumerable own properties from one 
 
 object.keys
 object.values
-object.emtries
+object.entries
+
+object.assign() // to create copy of object
