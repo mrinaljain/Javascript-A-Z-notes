@@ -1,17 +1,10 @@
 # Loops
 
-
-
-## 1. Arrays
-Arrays are simple iterable datastructures which can be traversed via multiple types of loops.
-
-
-
 ```
 let user = ["mrinal", "jain", "sanawad", "indore"];
 ```
 
-### 1.1 for Loop [Array]
+### for `Array`
 
 ```
 for(let i = 0; i < user.length; i++){
@@ -19,16 +12,17 @@ for(let i = 0; i < user.length; i++){
 }
 ```
 
-### 1.2 for-each Loop [Array]
+### for-each `Array`
 
 ```
 user.foreach(()=>{
 
-
 });
 ```
 
-### 1.3 for-of Loop [Array]
+### for-of `Array`
+ - better then forEach
+
 ```
 for(int key of user){
 
@@ -37,10 +31,8 @@ for(int key of user){
 ```
 
 
-## 2. Objects
-Objects are not iterable. just like arrays. So what we need to do is that extract the  array out of it and then loop over the array.
 
-### 2.1 for-in method [Object]
+### for-in method `Object`
 
 This method loops over the object , but also includes the keys inside the protochain hence its not trustworthy to use this
 ```
@@ -57,13 +49,17 @@ for(const key in user){
 }
 ```
 
-## Object Static Methods
 
-Object static methods are the methods which take an object as parameter and return Array as a response.
 
-- Object.keys
-- Object.values
-- Object.entries
 
-Further this returned array can be used in any way possible
+
+## Questions
+1. Difference Between forEach and for...of ?
+   - **`forEach` always loops through all elements**, but **`for...of` can exit early with `break`**. 
+   - **`forEach` is a method**, but **`for...of` is a loop**.  
+   - **`forEach` does not support `break` or `continue`**, but **`for...of` does**.  
+   - **`forEach` executes a callback function**, but **`for...of` directly iterates over values**.  
+   - **`forEach` is limited to arrays**, but **`for...of` works on arrays, maps, sets, strings, etc.**.  
+   - **`forEach` does not work well with `async/await`**, but **`for...of` supports `await` inside loops**.  
+   - **`forEach` has slight performance overhead (callback execution)**, but **`for...of` is generally faster**.  
 

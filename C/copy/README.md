@@ -31,7 +31,10 @@ const shallowCopy = Object.assign({}, obj);
 
 
 ## Questions
-- What is differnce between deep copy and shallow copy?
+1. What is differnce between deep copy and shallow copy?
 
-- Why is there a need of creating Deep Copy?
+2. Why is there a need of creating Deep Copy?
    Shallocopy uses reffrence to objects and nested elements , so if anything changes in nested elements the copied element also changes,Deep copy solves the above problem
+
+3. What is the difference between shallow copy and deep copy for arrays and objects?
+
