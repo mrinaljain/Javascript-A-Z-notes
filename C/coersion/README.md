@@ -9,3 +9,13 @@
 - "-" , "/", "*" does the numeric coersion only.
 
 ## Boolean Coersion
+
+
+## Falsy values in JavaScript include:
+
+- "" (empty string)
+- 0
+- null
+- undefined
+- NaN
+- false

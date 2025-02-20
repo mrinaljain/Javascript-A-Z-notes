@@ -70,3 +70,21 @@ function flat(accumulator, currentValue) {
 
 let flattened =  arr.reduce(flat, []);
 console.log(flattened);
+
+
+
+/// Practice
+
+// takes a function , initial value 
+// reduces the array to a singilure value
+
+
+Array.prototype.testReduce = function (callback, initialValue) {
+   let accumulator = initialValue ?? null;
+   for (let i = 0; i < this.length; i++) {
+      accumulator = callback(this, this[i], i);
+      
+   }
+   
+   return accumulator;
+}

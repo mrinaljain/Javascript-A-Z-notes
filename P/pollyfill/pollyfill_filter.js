@@ -35,3 +35,24 @@ Array.prototype.myFilter = function(callback){
 let myFilterAns = nums.myFilter(isEven);
 
 console.log(myFilterAns);
+
+// Practice
+
+// filter takes  a callback function
+// returnes a new array
+// based upon a condition which is inside callback  function
+
+Array.prototype.testfilter = function(callback){
+   let ans = [];
+
+   for (let i = 0; i < this.length; i++) {
+      if(callback(this, i, this[i]) === true){
+         ans.push(this[i]);
+      }
+   }
+   if(ans.length> 0){
+      return ans;
+   }else{
+      return [];
+   }
+}

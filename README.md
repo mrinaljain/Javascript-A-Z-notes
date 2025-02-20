@@ -45,6 +45,9 @@ Below is an overview of the JavaScript topics included in each folder:
 - **Zero-Based Indexing**: Why JavaScript arrays use zero-based indexing.
 - **Zipping Arrays**: Techniques for combining multiple arrays element-wise.
 
+## TODO
+- indexedDB
+
 ## How to Use
 
 1. **Clone the repository**:

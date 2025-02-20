@@ -1,5 +1,7 @@
 # STRING Methods
 
+**Strings are immutable → Methods return new values, not modify existing ones.**
+
 ### .length
 for length of string in integer
 ```

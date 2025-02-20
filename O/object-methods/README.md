@@ -14,3 +14,7 @@ The Object.assign() static method copies all enumerable own properties from one 
 
 
 object.hasOwnProperty()
+
+
+
+"propertyName" in Object   // checks if property is present in object

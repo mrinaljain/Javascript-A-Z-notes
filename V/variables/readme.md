@@ -3,8 +3,10 @@
 
 
 
+### Limitations in Variable Nomenclature
 
-
+- Must Start with a Letter, _, or $
+- Cannot Have Spaces
 
 ### Questions
 

@@ -28,3 +28,19 @@ console.log(doub);
 
 let trip = numbers.newMap(triple);
 console.log(trip);
+
+
+/// Practice
+// map works on array 
+// takes a callback(index, item , array)
+// returns new array 
+
+Array.prototype.testMap = function(callback){
+   let newArray = [];
+
+   for (let i = 0; i < this.length; i++) {
+      newArray.push(callback(this[i], this, i));
+      
+   }
+   return newArray;
+}
