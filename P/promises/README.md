@@ -20,6 +20,13 @@ p.then((data)=>{
    console.log(err.message);
 });
 ```
+Yes, you can write .then() after .finally() in a Promise chain. However, it's important to understand how .finally() works:
+## Finally ()
+Key Rules:
+.finally() does not modify the resolved value—it just executes and passes the previous value unchanged.
+If .finally() returns a value, it is ignored.
+If .finally() throws an error, the next .then() will not run, but the next .catch() will handle the error.
+
 
 ## How Promises and Timers Work
 ### Promise Creation: 

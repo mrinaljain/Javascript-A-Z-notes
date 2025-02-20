@@ -47,6 +47,7 @@ Below is an overview of the JavaScript topics included in each folder:
 
 ## TODO
 - indexedDB
+- priorty of Execution in eventloop
 
 ## How to Use
 
