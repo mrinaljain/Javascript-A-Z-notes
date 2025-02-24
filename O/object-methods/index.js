@@ -11,3 +11,6 @@ let obj2 = {
 // copy content from source to destination
 let ans = Object.assign(obj1, obj2, {});
 console.log(ans);
+
+
+console.log(obj2.keys());

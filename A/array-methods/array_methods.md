@@ -150,6 +150,8 @@ splice(start)
 splice(start, deleteCount)
 splice(start, deleteCount, item1, item2, /* …, */ itemN)
 ```
+
+
 ### slice
 returns subpart of array 
  - Start to End (end not included)
