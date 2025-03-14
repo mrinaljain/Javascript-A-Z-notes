@@ -2,13 +2,26 @@
 splice(start, deleteCount);
 splice(start, deleteCount, item1, item2,  itemN) */
 
-const months = ["Jan", "March", "April", "June", "July"];
+const months = ["Jan", "bef", "March", "April", "May", "June", "July"];
 
-months.splice(3 , 2 , "change", "another");
+//! Removing elements
+
+//? splice for only removing
+// months.splice(4, 1);
+
+//! Adding elements
+
+//? Remove + Add  splice(start, deleteCount, item1, item2,  itemN)
+// let ans = months.splice(3 , 2 , "change", "another");
+// console.log(ans);
+
+//! Replacing Elements
+
+months.splice(1, 1, "Feb");
+
 console.log(months);
 
+//! using negative index
 
-months.splice(4, 1, 'May');
-// Replaces 1 element at index 4
-
-// console.log(months);
+//! removing all elements
+// arr.splice(0, arr.length);

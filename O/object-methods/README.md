@@ -18,3 +18,9 @@ object.hasOwnProperty()
 
 
 "propertyName" in Object   // checks if property is present in object
+
+## delete a key
+
+```
+delete obhect.key;
+```
