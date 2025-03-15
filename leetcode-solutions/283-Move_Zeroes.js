@@ -4,29 +4,31 @@ Note that you must do this in-place without making a copy of the array.
 */
 let nums = [0, 1, 0, 3, 12];
 
-function shift(startIndex, endIndex){
-   for (let i = startIndex; i <= endIndex; i++) {
-     nums[startIndex - 1] = nums[startIndex];
-   }
-}
+
 var moveZeroes = function (nums) {
-
-   let n = nums.length;
-   let one = 1;
-   for (let i = 0; i < nums.length; i++) {
-     if (nums[i] == 0) {
-       shift( one, n);
-       console.log(nums);
-       nums[n] = 0;
-       n--;
-       one++;
-     }
-   }
-   // console.log(nums);
-   
-
+  let n = nums.length;
+  let l = 0;
+  for (let r = 0; r < n; r++) {
+    const element = nums[r];
+    if (element == 0) {
+    } else {
+      // swipe(index l , index r)
+      let temp = nums[l];
+      nums[l] = nums[r];
+      nums[r] = temp;
+      // increase l for next swipe
+      l++;
+    }
+  }
+  return nums;
 };
 
-moveZeroes(nums);
+console.log(moveZeroes(nums));
 
-// two pointers
+
+
+
+//? TRICK :  insted of moving zeros to right(end) , solve for moving nonZeros to left(start) which is same as asked.
+// two pointers approach 
+
+// Solution Explaination https://www.youtube.com/watch?v=aayNRwUN3Do

@@ -99,7 +99,7 @@ Array.isArray(arr);
 ```
 
 ### reverse
-reverse method will return the array with reversed index on th esame array.
+reverse method will return the array with reversed index of th esame array.
 
 
 
