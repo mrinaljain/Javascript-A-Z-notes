@@ -74,3 +74,9 @@ closureFun(20);
 6. Can closures be used with event handlers?
    
    Yes, closures are often used in event handlers to remember and manage state related to the event, even after the event has been triggered.
+
+
+
+### Links
+
+- Closures BTS(https://www.youtube.com/watch?v=6Ixyltr8_R0&t=22s)

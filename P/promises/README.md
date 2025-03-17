@@ -1,6 +1,9 @@
 # Promise
 
 Promise is an object which represents the eventual completion (or failure)  of an Asynchronous operation.
+##### Components
+- Promise Constructor
+- Executor Function
 ```
 const p = new Promise((res , rej)=> {
 
@@ -72,3 +75,10 @@ When you use await, the function pauses execution until the awaited promise reso
 
 2. What is the difference between `Promise` and `Async-Await`?
    
+
+
+
+#### Learning Material
+
+- [Understanding internal working of Promises using GIFs [ Video ]](https://www.youtube.com/watch?v=Xs1EMmBLpn4)
+- [GIF blog on Promises understanding](https://web.archive.org/web/20230325052017/https://dev.to/lydiahallie/javascript-visualized-promises-async-await-5gke)
