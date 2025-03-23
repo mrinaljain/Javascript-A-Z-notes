@@ -52,4 +52,18 @@ console.log(findMissingAndRepeatedValues(grid1));
 console.log(findMissingAndRepeatedValues(grid2));
 
 
-// need to optimise space complexity
+// Solution 1
+/*
+find frequency of al elements
+one with freq 2 is answer 
+one with freq 0 is also answer
+*/
+
+
+
+
+// Solution 2 
+/*
+S' - S = a - b (difference between actual sum and expected sum)
+P' - P = a² - b² = (a - b) * (a + b) (difference between actual sum of squares and expected sum of squares)
+*/
