@@ -188,6 +188,10 @@ Array.from(arrayLike)
 Array.from(arrayLike, mapFn)
 Array.from(arrayLike, mapFn, thisArg)
 
+
+const squares = Array.from({ length: 5 }, (_, i) => i * i);
+console.log(squares); // [0, 1, 4, 9, 16]
+
 ```
 
 ### at
@@ -259,6 +263,10 @@ sort will sort the array lexically and return the updated array.
 - sort method can take another param that is a comparator
 ```
 Array.sort(comparator);
+
 ```
+
+###  toSorted 
+
 
 
