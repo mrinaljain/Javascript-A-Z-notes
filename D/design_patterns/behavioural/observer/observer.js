@@ -6,36 +6,43 @@
 // 5. unsubscribe matlab observr mai ye vo fun pop
 // 6. notify matlab observer k andar k sare fun ko line se execute kr
 
+// Observable banega
+
 class Observable {
-  constructor() {
+  constructor(parameters) {
     this.observers = [];
   }
+  // subscribe krne ki suvidha
 
   subscribe(fn) {
     this.observers.push(fn);
   }
-
+  // unsubscribe krne ki suvidha
   unsubscribe(fn) {
-    this.observers = this.observers.filter((observer) => observer !== fn);
+    this.observers.filter((fun) => fun !== fn);
   }
 
-  notify(data) {
-    this.observers.forEach((observer) => observer(data));
+  // sare subscribers ko change notify krne ki suvidha
+  notify(param) {
+    this.observers.forEach((observer) => {
+      observer(param);
+    });
   }
 }
 
-// USAGE
 const newsAgency = new Observable();
 
-function subscriber1(news) {
-  console.log("Subscriber 1 received:", news);
-}
+// multiple observer/subscriber banenge
 
-function subscriber2(news) {
-  console.log("Subscriber 2 received:", news);
-}
+let subscriberOne = function (item) {
+  console.log(`Hello World with  subscriber 1 ${item}`);
+};
 
-newsAgency.subscribe(subscriber1);
-newsAgency.subscribe(subscriber2);
+let subscriberTwo = function (item) {
+  console.log(`Hello World with subscriber 2 ${item}`);
+};
 
-newsAgency.notify("🔥 New Article on Design Patterns!");
+newsAgency.subscribe(subscriberOne);
+newsAgency.subscribe(subscriberTwo);
+
+newsAgency.notify("dynamic news");
