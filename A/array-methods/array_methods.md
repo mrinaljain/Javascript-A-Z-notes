@@ -125,8 +125,10 @@ arr.includes(searchElement, fromIndex): boolean
 
 ```
 
-### shift
-Removes the first element from an array and returns it. If the array is empty, undefined is returned and the array is not modified.
+### shift  
+Removes the first element from an array and returns remover value. If the array is empty, undefined is returned and the array is not modified.
+- returns removed value
+- changes the orignal array
 ```
 ```
 ### unshift
