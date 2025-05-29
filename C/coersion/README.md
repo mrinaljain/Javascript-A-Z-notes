@@ -2,11 +2,16 @@
 
 ## Numeric Coersion
 
+null --> 0
 
 ## String Coersion
+ : operator ko string mai convert krne ki process.
+
+null --> "null"
 
 - "+" addition operator does the string coersion.
 - "-" , "/", "*" does the numeric coersion only.
+
 
 ## Boolean Coersion
 
@@ -19,3 +24,7 @@
 - undefined
 - NaN
 - false
+
+
+
+
