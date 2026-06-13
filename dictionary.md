@@ -10,3 +10,10 @@ Imperative programming
 
 Declearitive Programming
 : The type of programming in which you just declare that do this,and do not worry about the logic as it is abstracted.
+
+
+Hoisting:
+Javascript assigns memory to a variable even before assigning a value and this process is known as Hoisting.
+
+
+Temporal DeadZone:
